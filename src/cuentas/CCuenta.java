@@ -1,23 +1,41 @@
 
 package cuentas;
+/**Prueba Javadoc
+ * 
+ * @author diego
+ * @version 1.0
+ */
+
+
+
 public class CCuenta {
-
-
+    
+    /**nombre del usuario*/
     private String nombre;
+    
+    /**cuenta del cliente*/
     private String cuenta;
+    
     private double saldo;
     private double tipoInterés;
     
-    public String getNombre(){
+    /** @return el nombre del cliente*/
+    public String getNombre(){  
         return nombre;
     }
+    /** @param n es el nombre que se le quiere dar*/
     public void setNombre(String n){
         this.nombre=n;
     }
-    
+    /** @return cuenta del cliente*/
     public String getCuenta(){
         return cuenta;
     }
+    
+    /**Fija la cuenta
+     * 
+     * @param c es la cuenta
+     */
     public void setCuenta(String c){
         this.cuenta=c;
     }
@@ -39,26 +57,30 @@ public class CCuenta {
     {
     }
 
-    public CCuenta(String nom, String cue, double sal, double tipo)
+    /**Constructor de cuentas*/
+    public CCuenta(String nom, String cue, double sal, double tipo) 
     {
         nombre =nom;
         cuenta=cue;
         saldo=sal;
     }
 
+    /* @return saldo de la cuenta*/
     public double estado()
     {
         return saldo;
     }
 
-    public void ingresar(double cantidad) throws Exception
+    /**Ingresa dinero en cuenta*/
+    public void ingresar(double cantidad) throws Exception 
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
     }
 
-    public void retirar(double cantidad) throws Exception
+    /**Retira dinero de la cuenta*/
+    public void retirar(double cantidad) throws Exception 
     {
         if (cantidad <= 0)
             throw new Exception ("No se puede retirar una cantidad negativa");
@@ -66,7 +88,9 @@ public class CCuenta {
             throw new Exception ("No se hay suficiente saldo");
         saldo = saldo - cantidad;
     }
-    public static void operativa_cuenta(CCuenta cuenta1, float cantidad){
+    
+    /**Método usado en el main*/
+    public static void operativa_cuenta(CCuenta cuenta1, float cantidad){ 
         try {
             cuenta1.retirar(2300);
         } catch (Exception e) {
