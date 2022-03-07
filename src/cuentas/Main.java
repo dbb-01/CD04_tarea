@@ -19,5 +19,3 @@ public class Main {
 /*edit*/
 /*Cambios ´dia del examen*/
 /*más cambios*/
-/*cambios con GUI*/
-/*cambio dakjsdkasdjkasd*/
