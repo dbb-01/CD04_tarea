@@ -103,5 +103,6 @@ public class CCuenta {
             System.out.print("Fallo al ingresar");
         }
     
-}
-}
+}/*prueba main*/
+    }
+
