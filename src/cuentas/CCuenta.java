@@ -115,5 +115,5 @@ public class CCuenta {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }/*8*/
+    }/*8555*/
 }
